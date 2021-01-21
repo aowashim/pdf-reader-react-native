@@ -1,0 +1,12 @@
+{
+  "name": "pdf-reader",
+  "displayName": "pdf-reader",
+  "expo": {
+    "name": "pdf-reader",
+    "slug": "pdf-reader",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
