@@ -6,7 +6,7 @@ export const initDb = () => {
   const promise = new Promise((resolve, reject) => {
     db.transaction(tx => {
       tx.executeSql(
-        'CREATE TABLE IF NOT EXISTS history (id INTEGER PRIMARY KEY NOT NULL, name TEXT NOT NULL UNIQUE, uri TEXT NOT NULL UNIQUE, page INTEGER NOT NULL, time INTEGER NOT NULL);',
+        'CREATE TABLE IF NOT EXISTS history (id INTEGER PRIMARY KEY NOT NULL, name TEXT NOT NULL UNIQUE, uri TEXT NOT NULL UNIQUE, page INTEGER NOT NULL default 1, time INTEGER NOT NULL);',
         [],
         () => {
           resolve()
@@ -20,12 +20,12 @@ export const initDb = () => {
   return promise
 }
 
-export const insertHistory = (name, uri, page, time) => {
+export const insertHistory = (name, uri, time) => {
   const promise = new Promise((resolve, reject) => {
     db.transaction(tx => {
       tx.executeSql(
-        `INSERT or replace INTO history (name, uri, page, time) VALUES (?, ?, ?, ?);`,
-        [name, uri, page, time],
+        `INSERT or replace INTO history (name, uri, time) VALUES (?, ?, ?);`,
+        [name, uri, time],
         (_, result) => {
           resolve(result)
         },

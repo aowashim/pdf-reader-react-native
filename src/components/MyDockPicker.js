@@ -7,9 +7,12 @@ const MyDockPicker = props => {
   return (
     <View style={{ marginVertical: 20 }}>
       <Button
-        //icon="camera"
+        icon='folder-open'
         mode='contained'
-        style={{ marginHorizontal: 40, backgroundColor: 'rgba(6, 84, 117, 0.9)' }}
+        style={{
+          marginHorizontal: 40,
+          backgroundColor: 'rgba(6, 84, 117, 0.9)',
+        }}
         onPress={props.onPress}
       >
         Open

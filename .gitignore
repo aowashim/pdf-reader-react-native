@@ -53,6 +53,8 @@ buck-out/
 */fastlane/Preview.html
 */fastlane/screenshots
 
+*.hprof
+
 # Bundle artifacts
 *.jsbundle
 
@@ -62,3 +64,6 @@ buck-out/
 # Expo
 .expo/*
 web-build/
+
+server_pdf/node_modules
+server_pdf/.env

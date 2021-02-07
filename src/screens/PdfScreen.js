@@ -40,12 +40,12 @@ export default PdfScreen = ({ navigation, route }) => {
       >
         <View style={{ flexDirection: 'row', margin: 15 }}>
           <FontAwesome5
-            style={{ marginRight: 10 }}
+            style={{ marginRight: 10, marginTop: 2 }}
             name='file-pdf'
-            size={24}
+            size={18}
             color='black'
           />
-          <Text style={{ marginTop: 4 }}>{route.params.name}</Text>
+          <Text style={{ marginTop: 2 }}>{route.params.name}</Text>
         </View>
       </MyModal>
 
